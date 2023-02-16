@@ -1,6 +1,6 @@
 // function to generate markdown for README
 const generateMarkdown = (data) => `
-  ${data.title}
+  # ${data.title}
 `;
 
 module.export = generateMarkdown;
