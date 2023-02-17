@@ -15,18 +15,21 @@ const questions = () =>
     {
       type: "input",
       name: "repoUrl",
-      message: "Add your repository complete link here, Exemple: 'https://github.com/<USERNAME>/<REPONAME>'"
+      message: "Add your repository complete link here, Example: 'https://github.com/<USERNAME>/<REPONAME>': "
     },
-    // {
-    //   type: "input",
-    //   name: "github_username",
-    //   message: "What is your GitHub name?",
-    // },
-    // {
-    //   type: "input",
-    //   name: "repo_name",
-    //   message: "What's the project repo name?",
-    // },
+    {
+      type: "confirm",
+      name: "linkedin",
+      message: "Do you have a LinkedIn? ",
+    },
+    {
+      type: "input",
+      name: "linkedinUrl",
+      message: "Add your LinkedIn profile url. Example: https://www.linkedin.com/in/<USERNAME>/ ",
+      when(answers) {
+        return answers.linkedin;
+      }
+    },
     // ================ test ======================
     // {
     //   type: "confirm",
