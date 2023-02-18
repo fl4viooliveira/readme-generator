@@ -67,41 +67,49 @@ const questions = () =>
       message: "Write what your project is about:\n >> ",
       waitUserInput: true,
     },
-    // ================ test ======================
-    // {
-    //   type: "confirm",
-    //   name: "bacon",
-    //   message: "Do you like bacon?",
-    // },
-    // {
-    //   type: "input",
-    //   name: "favorite",
-    //   message: "Bacon lover, what is your favorite type of bacon?",
-    //   when(answers) {
-    //     return answers.bacon;
-    //   },
-    // },
-    // {
-    //   type: "confirm",
-    //   name: "pizza",
-    //   message: "Ok... Do you like pizza?",
-    //   when(answers) {
-    //     return !likesFood("bacon")(answers);
-    //   },
-    // },
-    // {
-    //   type: "input",
-    //   name: "favorite",
-    //   message: "Whew! What is your favorite type of pizza?",
-    //   when: likesFood("pizza"),
-    // },
+    {
+      type: "checkbox",
+      name: "builtWith",
+      message: "Select which tecnology did you use on this project:",
+      choices: [
+        new inquirer.Separator(" = Program Languages = "),
+        {
+          name: "JavaScript",
+        },
+        {
+          name: "Python",
+        },
+        {
+          name: "Ruby",
+        },
+        new inquirer.Separator(" = Frameworks = "),
+        {
+          name: "React",
+        },
+        {
+          name: "jQuery",
+        },
+        {
+          name: "Bootstrap",
+        },
+        {
+          name: "Django",
+        },
+        {
+          name: "Rails",
+        },
+        {
+          name: "None",
+        },
+      ],
+      validate(answer) {
+        if (answer.length < 1){
+          return "You must choose at least one topping.";
+        }
+        return true;
+      }
+    },
   ]);
-
-function likesFood(aFood) {
-  return function (answers) {
-    return answers[aFood];
-  };
-}
 
 // function to write README file
 const writeToFile = (fileName, quest) => {

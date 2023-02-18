@@ -25,7 +25,7 @@
 
   <h3 align="center">Readme Generator</h3>
     <p align="center">
-      This project is a markdown generator for your repository.
+      This project is a markdown generator for your repository. 
       <br />
       <a href=https://github.com/fl4viooliveira/readme-generator><strong>Explore the docs »</strong></a>
       <br />
@@ -72,15 +72,21 @@
   [product-screenshot]: images/screen.png 
   
 
-  
+  This project is a command-line application that dynamically generates a professional **README.md** file from a user's input.
 
-This project is a command-line application that dynamically generates a professional **README.md** file from a user's input.
 You can quickly and easily create a README file by using a command-line application to generate one. 
+
 It allows the project creator to devote more time to working on the project.
 
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  ### Built With:
+  - <img src="https://img.shields.io/badge/JavaScript-563D7C?style=for-the-badge&logo=JavaScript&logoColor=white"> 
+ 
+
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
 
   [contributors-shield]: https://img.shields.io/github/contributors/fl4viooliveira/readme-generator.svg?style=for-the-badge
   [contributors-url]: https://github.com/fl4viooliveira/readme-generator/graphs/contributors

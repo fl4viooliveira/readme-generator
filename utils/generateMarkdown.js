@@ -22,35 +22,36 @@ const linkedin = function (url) {
 
   [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
   [linkedin-url]: ${url.linkedinUrl}
-  `
-  }else{
-   return `<!-- no LinkedIn -->` 
+  `;
+  } else {
+    return `<!-- no LinkedIn -->`;
   }
 };
 
-const projectLogo = function(inp){
-  if (inp.logo && inp.logoPath){
+const projectLogo = function (inp) {
+  if (inp.logo && inp.logoPath) {
     return `
   <a href=${inp.repoUrl}>
     <img src=${inp.logoPath} alt="Logo" width="80" height="80">
   </a>
-  `
-  }else{
-    return `<!-- no Logo -->`
+  `;
+  } else {
+    return `<!-- no Logo -->`;
   }
-}
+};
 
-const screenShot = function(inp){
-  if (inp.screen && inp.screenPath){
+const screenShot = function (inp) {
+  if (inp.screen && inp.screenPath) {
     return `
   [![Product Name Screen Shot][product-screenshot]](${inp.repoUrl})
 
   [product-screenshot]: ${inp.screenPath} 
-  `
-  }else{
-    return `<!-- no screenshot -->`
+  `;
+  } else {
+    return `<!-- no screenshot -->`;
   }
-}
+};
+
 
 module.exports = function (data) {
   repoLink(data.repoUrl);
@@ -121,6 +122,11 @@ module.exports = function (data) {
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  ### Built With:
+  ${data.builtWith.map((item) => `- <img src="https://img.shields.io/badge/${item}-563D7C?style=for-the-badge&logo=${item}&logoColor=white"> \n`).join(' ')} 
+
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+  
 
   [contributors-shield]: https://img.shields.io/github/contributors/${userName}/${repoName}.svg?style=for-the-badge
   [contributors-url]: https://github.com/${userName}/${repoName}/graphs/contributors
