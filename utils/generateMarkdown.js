@@ -75,7 +75,6 @@ module.exports = function (data) {
   <h3 align="center">${data.title}</h3>
     <p align="center">
       ${data.shortDescription}
-      project_description
       <br />
       <a href=${data.repoUrl}><strong>Explore the docs »</strong></a>
       <br />

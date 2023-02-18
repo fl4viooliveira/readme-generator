@@ -23,10 +23,9 @@
   </a>
   
 
-  <h3 align="center">Readme Generator </h3>
+  <h3 align="center">Readme Generator</h3>
     <p align="center">
-      This project is a markdown generator for your repository. 
-      project_description
+      This project is a markdown generator for your repository.
       <br />
       <a href=https://github.com/fl4viooliveira/readme-generator><strong>Explore the docs »</strong></a>
       <br />
