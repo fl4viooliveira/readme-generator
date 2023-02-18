@@ -10,22 +10,22 @@ const questions = () =>
     {
       type: "input",
       name: "title",
-      message: "What is the title to this project?\n ->> ",
+      message: "What is the title to this project?\n >> ",
     },
     {
       type: "input",
       name: "repoUrl",
-      message: "Add your repository complete link here,\n Example: 'https://github.com/<USERNAME>/<REPONAME>':\n ->> "
+      message: "Add your repository complete link here,\n Example: 'https://github.com/<USERNAME>/<REPONAME>':\n >> "
     },
     {
       type: "confirm",
       name: "linkedin",
-      message: "Do you have a LinkedIn?\n ->> ",
+      message: "Do you have a LinkedIn?\n >> ",
     },
     {
       type: "input",
       name: "linkedinUrl",
-      message: "Add your LinkedIn profile url.\n Example: https://www.linkedin.com/in/<USERNAME>/\n ->> ",
+      message: "Add your LinkedIn profile url.\n Example: https://www.linkedin.com/in/<USERNAME>/\n >> ",
       when(answers) {
         return answers.linkedin;
       }
@@ -33,15 +33,34 @@ const questions = () =>
     {
       type: "confirm",
       name: "logo",
-      message: "Have your project a logo?\n ->> ",
+      message: "Have your project a logo?\n >> ",
     },
     {
       type: "input",
       name: "logoPath",
-      message: "Add your logo path.\n Example: images/logo.png\n ->> ",
+      message: "Add your logo path.\n Example: images/logo.png\n >> ",
       when(answers){
         return answers.logo;
       },
+    },
+    {
+      type: "confirm",
+      name: "screen",
+      message: "Have your project a screen shot?\n >> ",
+    },
+    {
+      type: "input",
+      name: "screenPath",
+      message: "Add your screen shot path.\n Example: images/screenshot.png\n >> ",
+      when(answers){
+        return answers.screen;
+      },
+    },
+    {
+      type: "editor",
+      name: "about",
+      message: "Write what your project is about:\n >> ",
+      waitUserInput: true,
     },
     // ================ test ======================
     // {
