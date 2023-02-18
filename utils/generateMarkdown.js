@@ -39,7 +39,7 @@ module.exports = function (data) {
   [![MIT License][license-shield]][license-url]
   ${linkedin(data)}
 
-    # ${data.title}
+  # ${data.title}
 
   [contributors-shield]: https://img.shields.io/github/contributors/${userName}/${repoName}.svg?style=for-the-badge
   [contributors-url]: https://github.com/${userName}/${repoName}/graphs/contributors
