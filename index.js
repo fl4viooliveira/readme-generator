@@ -112,7 +112,7 @@ const writeToFile = (fileName, quest) => {
 };
 
 // function to initialize program
-const init = () => writeToFile("test.md", questions);
+const init = () => writeToFile("README.md", questions);
 
 // function call to initialize program
 init();
