@@ -16,7 +16,7 @@ const repoLink = (url) => {
 };
 
 const linkedin = function (url) {
-  if (url.linkedin) {
+  if (url.linkedin && url.linkedinUrl) {
     return `
   [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -28,10 +28,26 @@ const linkedin = function (url) {
   }
 };
 
+const projectLogo = function(inp){
+  if (inp.logo && inp.logoPath){
+    return `
+  <a href=${inp.repoUrl}>
+    <img src=${inp.logoPath} alt="Logo" width="80" height="80">
+  </a>
+  `
+  }else{
+    return `<!-- no Logo -->`
+  }
+}
+
 module.exports = function (data) {
   repoLink(data.repoUrl);
   console.log(data, userName, repoName);
+
   return `
+  <a name="readme-top"></a>
+
+  <!-- PROJECT SHIELDS -->
   [![Contributors][contributors-shield]][contributors-url]
   [![Forks][forks-shield]][forks-url]
   [![Stargazers][stars-shield]][stars-url]
@@ -39,7 +55,26 @@ module.exports = function (data) {
   [![MIT License][license-shield]][license-url]
   ${linkedin(data)}
 
-  # ${data.title}
+  <!-- PROJECT LOGO -->
+  <br />
+  <div align="center">
+  ${projectLogo(data)}
+
+  <h3 align="center">${data.title}</h3>
+    <p align="center">
+      project_description
+      <br />
+      <a href=${data.repoUrl}><strong>Explore the docs »</strong></a>
+      <br />
+      <br />
+      <a href="${data.repoUrl}">View Demo</a>
+      ·
+      <a href="${data.repoUrl}/issues">Report Bug</a>
+      ·
+      <a href="${data.repoUrl}/issues">Request Feature</a>
+    </p>
+  </div>
+
 
   [contributors-shield]: https://img.shields.io/github/contributors/${userName}/${repoName}.svg?style=for-the-badge
   [contributors-url]: https://github.com/${userName}/${repoName}/graphs/contributors

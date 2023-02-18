@@ -30,6 +30,19 @@ const questions = () =>
         return answers.linkedin;
       }
     },
+    {
+      type: "confirm",
+      name: "logo",
+      message: "Have your project a logo?\n ->> ",
+    },
+    {
+      type: "input",
+      name: "logoPath",
+      message: "Add your logo path.\n Example: images/logo.png\n ->> ",
+      when(answers){
+        return answers.logo;
+      },
+    },
     // ================ test ======================
     // {
     //   type: "confirm",
