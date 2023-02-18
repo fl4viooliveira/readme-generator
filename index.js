@@ -44,6 +44,11 @@ const questions = () =>
       },
     },
     {
+      type: "input",
+      name: "shortDescription",
+      message: "Add a short description of your project.\n >>"
+    },
+    {
       type: "confirm",
       name: "screen",
       message: "Have your project a screen shot?\n >> ",
