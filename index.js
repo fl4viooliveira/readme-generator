@@ -15,7 +15,13 @@ const questions = () =>
     {
       type: "input",
       name: "repoUrl",
-      message: "Add your repository complete link here,\n Example: 'https://github.com/<USERNAME>/<REPONAME>':\n >> "
+      message: "Add your repository complete link here,\n Example: 'https://github.com/<USERNAME>/<REPONAME>':\n >> ",
+      validate(answer) {
+        if (answer === ""){
+          return "You must add the repository URL.";
+        }
+        return true;
+      }
     },
     {
       type: "confirm",
@@ -136,6 +142,11 @@ const questions = () =>
       when(answers){
         return answers.installConf;
       },
+    },
+    {
+      type: "confirm",
+      name: "contri",
+      message: "Do you want to add contributing steps to this document?\n >> ",
     },
   ]);
 

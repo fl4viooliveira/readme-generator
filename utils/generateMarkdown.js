@@ -76,6 +76,25 @@ const installation = function (inp) {
   }
 };
 
+const contributing = function (inp) {
+  if (inp.contri) {
+    return `
+  ### Contributing 
+
+  If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+  1. Fork the Project
+  2. Create your Feature Branch ( ***git checkout -b feature/AmazingFeature*** )
+  3. Commit your Changes ( ***git commit -m 'Add some AmazingFeature'*** )
+  4. Push to the Branch ( ***git push origin feature/AmazingFeature*** )
+  5. Open a Pull Request
+  `;
+  } else {
+    return `None`;
+  }
+};
+
 module.exports = function (data) {
   repoLink(data.repoUrl);
   console.log(data, userName, repoName);
@@ -157,6 +176,12 @@ module.exports = function (data) {
   ${installation(data)}
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+  <!-- CONTRIBUTING -->
+  ${contributing(data)}
+
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
   [contributors-shield]: https://img.shields.io/github/contributors/${userName}/${repoName}.svg?style=for-the-badge
   [contributors-url]: https://github.com/${userName}/${repoName}/graphs/contributors
