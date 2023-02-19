@@ -52,6 +52,17 @@ const screenShot = function (inp) {
   }
 };
 
+const prerequisites = function (inp) {
+  if (inp.prereqConf && inp.prereq) {
+    return `
+  ### Prerequisites 
+
+  ${inp.prereq}
+  `;
+  } else {
+    return `None`;
+  }
+};
 
 module.exports = function (data) {
   repoLink(data.repoUrl);
@@ -126,6 +137,10 @@ module.exports = function (data) {
   ${data.builtWith.map((item) => `- <img src="https://img.shields.io/badge/${item}-563D7C?style=for-the-badge&logo=${item}&logoColor=white"> \n`).join(' ')} 
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+  <!-- GETTING STARTED -->
+  ## Getting Started
+  ${prerequisites(data)}
   
 
   [contributors-shield]: https://img.shields.io/github/contributors/${userName}/${repoName}.svg?style=for-the-badge

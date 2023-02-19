@@ -96,7 +96,7 @@ const questions = () =>
           name: "Django",
         },
         {
-          name: "Rails",
+          name: "RubyonRails",
         },
         {
           name: "None",
@@ -108,6 +108,20 @@ const questions = () =>
         }
         return true;
       }
+    },
+    {
+      type: "confirm",
+      name: "prereqConf",
+      message: "Do you want to add the Prerequisites section to your Readme?\n >> ",
+    },
+    {
+      type: "editor",
+      name: "prereq",
+      message: "Write the Prerequisites necessary for this application.\n You can write it using Markdown format.\n >> ",
+      waitUserInput: true,
+      when(answers){
+        return answers.prereqConf;
+      },
     },
   ]);
 
