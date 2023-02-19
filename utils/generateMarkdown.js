@@ -2,6 +2,7 @@
 
 let userName;
 let repoName;
+let licenseFile;
 
 let urlLinkedin;
 
@@ -25,6 +26,17 @@ const linkedin = function (url) {
   `;
   } else {
     return `<!-- no LinkedIn -->`;
+  }
+};
+
+const license = function (inp) {
+  if (inp.licenseConf && inp.license) {
+    licenseFile = inp.license
+    return `
+  [![License][license-shield]][license-url]
+  `;
+  } else {
+    return "";
   }
 };
 
@@ -107,7 +119,7 @@ module.exports = function (data) {
   [![Forks][forks-shield]][forks-url]
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
-  [![MIT License][license-shield]][license-url]
+  ${license(data)}
   ${linkedin(data)}
 
   <!-- PROJECT LOGO -->
@@ -182,6 +194,13 @@ module.exports = function (data) {
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  <!-- LICENSE -->
+  ## License
+
+  ${data.licenseConf? `Distributed under the ${license(data)}.` : `none`}
+
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
   [contributors-shield]: https://img.shields.io/github/contributors/${userName}/${repoName}.svg?style=for-the-badge
   [contributors-url]: https://github.com/${userName}/${repoName}/graphs/contributors
@@ -192,7 +211,7 @@ module.exports = function (data) {
   [issues-shield]: https://img.shields.io/github/issues/${userName}/${repoName}.svg?style=for-the-badge
   [issues-url]: https://github.com/${userName}/${repoName}/issues
   [license-shield]: https://img.shields.io/github/license/${userName}/${repoName}.svg?style=for-the-badge
-  [license-url]: https://github.com/${userName}/${repoName}/blob/master/LICENSE.txt
+  [license-url]: https://github.com/${userName}/${repoName}/blob/master/${licenseFile}
 
   
 `;

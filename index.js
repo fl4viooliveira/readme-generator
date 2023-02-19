@@ -25,8 +25,28 @@ const questions = () =>
     },
     {
       type: "confirm",
+      name: "licenseConf",
+      message: "Do you have a LICENSE file on the root of this repo?\n >> "
+    },
+    {
+      type: "list",
+      name: "license",
+      message: "How your LICENSE file looks like?",
+      choices: [
+        "LICENSE",
+        "LICENSE.txt",
+        "License.txt",
+        "LICENSE.md",
+        "License.md",
+      ],
+      when(answers){
+        return answers.licenseConf;
+      }
+    },
+    {
+      type: "confirm",
       name: "linkedin",
-      message: "Do you have a LinkedIn?\n >> ",
+      message: "Do you want add your LinkedIn at this file?\n >> ",
     },
     {
       type: "input",
@@ -87,6 +107,21 @@ const questions = () =>
         },
         {
           name: "Ruby",
+        },
+        {
+          name: "Go",
+        },
+        {
+          name: "Rust",
+        },
+        {
+          name: "C",
+        },
+        {
+          name: "C++",
+        },
+        {
+          name: "Java",
         },
         new inquirer.Separator(" = Frameworks = "),
         {

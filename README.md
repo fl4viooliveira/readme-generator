@@ -6,7 +6,9 @@
   [![Forks][forks-shield]][forks-url]
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
-  [![MIT License][license-shield]][license-url]
+  
+  [![License][license-shield]][license-url]
+  
   
   [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -25,7 +27,7 @@
 
   <h3 align="center">Readme Generator</h3>
     <p align="center">
-      This project is a markdown generator for your repository.
+      This project is a markdown generator for your repository. 
       <br />
       <a href=https://github.com/fl4viooliveira/readme-generator><strong>Explore the docs »</strong></a>
       <br />
@@ -101,17 +103,17 @@ It allows the project creator to devote more time to working on the project.
   1. Clone the repo
    ``` sh
    git clone https://github.com/fl4viooliveira/readme-generator.git
-  ```
+   ```
 
 2. Install NPM packages
-  ``` sh
-  npm install
-  ```
+   ``` sh
+   npm install
+   ```
 
 3. Execute `index.js`
-  ``` sh
-  node index.js
-  ```
+   ``` sh
+   node index.js
+   ```
 
 4. Answer the questions.
 
@@ -135,6 +137,15 @@ Don't forget to give the project a star! Thanks again!
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  <!-- LICENSE -->
+  ## License
+
+  Distributed under the 
+  [![License][license-shield]][license-url]
+  .
+
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
   [contributors-shield]: https://img.shields.io/github/contributors/fl4viooliveira/readme-generator.svg?style=for-the-badge
   [contributors-url]: https://github.com/fl4viooliveira/readme-generator/graphs/contributors
@@ -145,6 +156,6 @@ Don't forget to give the project a star! Thanks again!
   [issues-shield]: https://img.shields.io/github/issues/fl4viooliveira/readme-generator.svg?style=for-the-badge
   [issues-url]: https://github.com/fl4viooliveira/readme-generator/issues
   [license-shield]: https://img.shields.io/github/license/fl4viooliveira/readme-generator.svg?style=for-the-badge
-  [license-url]: https://github.com/fl4viooliveira/readme-generator/blob/master/LICENSE.txt
+  [license-url]: https://github.com/fl4viooliveira/readme-generator/blob/master/LICENSE
 
   
