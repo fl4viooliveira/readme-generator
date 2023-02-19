@@ -31,7 +31,7 @@ const linkedin = function (url) {
 
 const license = function (inp) {
   if (inp.licenseConf && inp.license) {
-    licenseFile = inp.license
+    licenseFile = inp.license;
     return `
   [![License][license-shield]][license-url]
   `;
@@ -107,22 +107,42 @@ Don't forget to give the project a star! Thanks again!
   }
 };
 
-const contact = function (inp){
-  if(inp.contact && inp.name && inp.email){
+const contact = function (inp) {
+  if (inp.contact && inp.name && inp.email) {
     return `
   ## Contact
   - ${inp.name} - [${inp.email}](${inp.email})
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
-`
-  }else{
-    return ""
+`;
+  } else {
+    return "";
   }
+};
+
+function youtube_parser(url) {
+  var regExp =
+    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+  var match = url.match(regExp);
+  return match && match[7].length == 11 ? match[7] : false;
 }
+
+const video = function (inp) {
+  if (inp.videoConf && inp.video) {
+    const videoId = youtube_parser(inp.video);
+    return `
+  ## Usage Video
+
+  [![${inp.title}](https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg)](https://www.youtube.com/watch?v=${videoId} "${inp.title}")   
+`;
+  } else {
+    ("");
+  }
+};
 
 module.exports = function (data) {
   repoLink(data.repoUrl);
-  console.log(data, userName, repoName);
+  // console.log(data, userName, repoName);
 
   return `
   <a name="readme-top"></a>
@@ -176,7 +196,6 @@ module.exports = function (data) {
       <li><a href="#contributing">Contributing</a></li>
       <li><a href="#license">License</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#acknowledgments">Acknowledgments</a></li>
     </ol>
   </details>
 
@@ -190,7 +209,12 @@ module.exports = function (data) {
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
   ### Built With:
-  ${data.builtWith.map((item) => `- <img src="https://img.shields.io/badge/${item}-563D7C?style=for-the-badge&logo=${item}&logoColor=white"> \n`).join(' ')} 
+  ${data.builtWith
+    .map(
+      (item) =>
+        `- <img src="https://img.shields.io/badge/${item}-563D7C?style=for-the-badge&logo=${item}&logoColor=white"> \n`
+    )
+    .join(" ")} 
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,6 +226,9 @@ module.exports = function (data) {
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  <!-- USAGE EXAMPLES -->
+  ${video(data)}
+
   <!-- CONTRIBUTING -->
   ${contributing(data)}
 
@@ -210,7 +237,7 @@ module.exports = function (data) {
   <!-- LICENSE -->
   ## License
 
-  ${data.licenseConf? `Distributed under the ${license(data)}.` : `none`}
+  ${data.licenseConf ? `Distributed under the ${license(data)}.` : `none`}
 
 
   <!-- CONTACT -->

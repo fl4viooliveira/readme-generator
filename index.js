@@ -204,6 +204,19 @@ const questions = () =>
         return answers.contact;
       }
     },
+    {
+      type: "confirm",
+      name: "videoConf",
+      message: "Your project have a YouTube video?\n >> "
+    },
+    {
+      type: "input",
+      name: "video",
+      message: "Add the video link here.\n Format: https://www.youtube.com/watch?v=AXmt05ZcT7k\n >> ",
+      when(answers){
+        return answers.videoConf;
+      }
+    },
   ]);
 
 // function to write README file
@@ -213,14 +226,14 @@ const writeToFile = (fileName, quest) => {
     .then((data) => write(fileName, generateMarkdown(data)))
     .then(() =>
       console.log(
-        "Successfully you have a amazing Readme file to add to your repo."
+        "Successfully you have a amazing Readme file to add to your repo.\n The file is called Readme-example.md it is your root directory."
       )
     )
     .catch((err) => console.error(err));
 };
 
 // function to initialize program
-const init = () => writeToFile("README.md", questions);
+const init = () => writeToFile("Readme-example.md", questions);
 
 // function call to initialize program
 init();
