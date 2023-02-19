@@ -25,7 +25,7 @@
 
   <h3 align="center">Readme Generator</h3>
     <p align="center">
-      This project is a markdown generator for your repository. 
+      This project is a markdown generator for your repository.
       <br />
       <a href=https://github.com/fl4viooliveira/readme-generator><strong>Explore the docs »</strong></a>
       <br />
@@ -78,7 +78,6 @@ It allows the project creator to devote more time to working on the project.
 
 
 
-
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
   ### Built With:
@@ -102,7 +101,7 @@ It allows the project creator to devote more time to working on the project.
   1. Clone the repo
    ``` sh
    git clone https://github.com/fl4viooliveira/readme-generator.git
-   ```
+  ```
 
 2. Install NPM packages
   ``` sh
@@ -111,13 +110,31 @@ It allows the project creator to devote more time to working on the project.
 
 3. Execute `index.js`
   ``` sh
-  node index.js;
+  node index.js
   ```
 
 4. Answer the questions.
 
   
   
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+  <!-- CONTRIBUTING -->
+  
+  ### Contributing 
+
+  If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+  1. Fork the Project
+  2. Create your Feature Branch ( ***git checkout -b feature/AmazingFeature*** )
+  3. Commit your Changes ( ***git commit -m 'Add some AmazingFeature'*** )
+  4. Push to the Branch ( ***git push origin feature/AmazingFeature*** )
+  5. Open a Pull Request
+  
+
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
   [contributors-shield]: https://img.shields.io/github/contributors/fl4viooliveira/readme-generator.svg?style=for-the-badge
   [contributors-url]: https://github.com/fl4viooliveira/readme-generator/graphs/contributors
