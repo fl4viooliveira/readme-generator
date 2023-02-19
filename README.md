@@ -104,11 +104,11 @@ It allows the project creator to devote more time to working on the project.
   1. Clone the repo
 ``` sh
 git clone https://github.com/fl4viooliveira/readme-generator.git
+cd readme-generator
 ```
 
 2. Install NPM packages
 ``` sh
-cd readme-generator
 npm install
 ```
 
@@ -154,10 +154,15 @@ Don't forget to give the project a star! Thanks again!
   .
 
 
-  <!-- CONTACT -->
+  <!-- CONTACT TO QUESTIONS-->
   
-  ## Contact
+  ## Contact to Questions
+
+  ### Send your Questions about the project:
   - Flavio Oliveira - [fl4viooliveira@gmail.com](fl4viooliveira@gmail.com)
+
+  - GitHub Link: [github.com/fl4viooliveira](https://github.com/fl4viooliveira)
+
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

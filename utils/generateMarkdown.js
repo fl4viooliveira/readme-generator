@@ -110,8 +110,13 @@ Don't forget to give the project a star! Thanks again!
 const contact = function (inp) {
   if (inp.contact && inp.name && inp.email) {
     return `
-  ## Contact
+  ## Contact to Questions
+
+  ### Send your Questions about the project:
   - ${inp.name} - [${inp.email}](${inp.email})
+
+  - GitHub Link: [github.com/${userName}](https://github.com/${userName})
+
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 `;
@@ -120,6 +125,7 @@ const contact = function (inp) {
   }
 };
 
+// Function to extract the ID from YouTube video Link
 function youtube_parser(url) {
   var regExp =
     /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
@@ -240,7 +246,7 @@ module.exports = function (data) {
   ${data.licenseConf ? `Distributed under the ${license(data)}.` : `none`}
 
 
-  <!-- CONTACT -->
+  <!-- CONTACT TO QUESTIONS-->
   ${contact(data)}
 
 
