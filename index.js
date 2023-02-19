@@ -226,14 +226,14 @@ const writeToFile = (fileName, quest) => {
     .then((data) => write(fileName, generateMarkdown(data)))
     .then(() =>
       console.log(
-        "Successfully you have a amazing Readme file to add to your repo.\n The file is called Readme-example.md it is in your root directory."
+        "Successfully you have a amazing Readme file to add to your repo."
       )
     )
     .catch((err) => console.error(err));
 };
 
 // function to initialize program
-const init = () => writeToFile("Readme-example.md", questions);
+const init = () => writeToFile("README.md", questions);
 
 // function call to initialize program
 init();
