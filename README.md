@@ -73,10 +73,10 @@
   
 
   This project is a command-line application that dynamically generates a professional **README.md** file from a user's input.
-
 You can quickly and easily create a README file by using a command-line application to generate one. 
-
 It allows the project creator to devote more time to working on the project.
+
+
 
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,6 +86,37 @@ It allows the project creator to devote more time to working on the project.
  
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+  <!-- GETTING STARTED -->
+  ## Getting Started
+  
+  ### Prerequisites 
+
+  You must have ***node.js*** installed on your computer to install this application.
+
+  
+
+  
+  ### Installation 
+
+  1. Clone the repo
+   ``` sh
+   git clone https://github.com/fl4viooliveira/readme-generator.git
+   ```
+
+2. Install NPM packages
+  ``` sh
+  npm install
+  ```
+
+3. Execute `index.js`
+  ``` sh
+  node index.js;
+  ```
+
+4. Answer the questions.
+
+  
   
 
   [contributors-shield]: https://img.shields.io/github/contributors/fl4viooliveira/readme-generator.svg?style=for-the-badge
