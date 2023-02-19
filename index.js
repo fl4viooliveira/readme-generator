@@ -117,10 +117,24 @@ const questions = () =>
     {
       type: "editor",
       name: "prereq",
-      message: "Write the Prerequisites necessary for this application.\n You can write it using Markdown format.\n >> ",
+      message: "Write the Prerequisites necessary for this application.\n You can write it using Markdown syntax.\n >> ",
       waitUserInput: true,
       when(answers){
         return answers.prereqConf;
+      },
+    },
+    {
+      type: "confirm",
+      name: "installConf",
+      message: "Do you want to add the Installation steps to your app on Readme?\n >> ",
+    },
+    {
+      type: "editor",
+      name: "install",
+      message: "Write the Installation steps.\n You can write it using Markdown syntax.\n >> ",
+      waitUserInput: true,
+      when(answers){
+        return answers.installConf;
       },
     },
   ]);

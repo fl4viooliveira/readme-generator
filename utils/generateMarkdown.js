@@ -64,6 +64,18 @@ const prerequisites = function (inp) {
   }
 };
 
+const installation = function (inp) {
+  if (inp.installConf && inp.install) {
+    return `
+  ### Installation 
+
+  ${inp.install}
+  `;
+  } else {
+    return `None`;
+  }
+};
+
 module.exports = function (data) {
   repoLink(data.repoUrl);
   console.log(data, userName, repoName);
@@ -141,7 +153,10 @@ module.exports = function (data) {
   <!-- GETTING STARTED -->
   ## Getting Started
   ${prerequisites(data)}
+
+  ${installation(data)}
   
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
   [contributors-shield]: https://img.shields.io/github/contributors/${userName}/${repoName}.svg?style=for-the-badge
   [contributors-url]: https://github.com/${userName}/${repoName}/graphs/contributors

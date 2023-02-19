@@ -11,26 +11,30 @@
   [![LinkedIn][linkedin-shield]][linkedin-url]
 
   [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-  [linkedin-url]: fsd
+  [linkedin-url]: https://www.linkedin.com/in/fl4viooliveira/
   
 
   <!-- PROJECT LOGO -->
   <br />
   <div align="center">
-  <!-- no Logo -->
+  
+  <a href=https://github.com/fl4viooliveira/readme-generator>
+    <img src=images/logo.png alt="Logo" width="80" height="80">
+  </a>
+  
 
-  <h3 align="center">fsdf </h3>
+  <h3 align="center">Readme Generator</h3>
     <p align="center">
-      fsd
+      This project is a markdown generator for your repository. 
       <br />
-      <a href=sdfsd><strong>Explore the docs »</strong></a>
+      <a href=https://github.com/fl4viooliveira/readme-generator><strong>Explore the docs »</strong></a>
       <br />
       <br />
-      <a href="sdfsd">View Demo</a>
+      <a href="https://github.com/fl4viooliveira/readme-generator">View Demo</a>
       ·
-      <a href="sdfsd/issues">Report Bug</a>
+      <a href="https://github.com/fl4viooliveira/readme-generator/issues">Report Bug</a>
       ·
-      <a href="sdfsd/issues">Request Feature</a>
+      <a href="https://github.com/fl4viooliveira/readme-generator/issues">Request Feature</a>
     </p>
   </div>
 
@@ -62,21 +66,23 @@
   <!-- ABOUT THE PROJECT -->
   ## About The Project
 
-  <!-- no screenshot -->
-
   
+  [![Product Name Screen Shot][product-screenshot]](https://github.com/fl4viooliveira/readme-generator)
+
+  [product-screenshot]: images/screen.png 
+  
+
+  This project is a command-line application that dynamically generates a professional **README.md** file from a user's input.
+You can quickly and easily create a README file by using a command-line application to generate one. 
+It allows the project creator to devote more time to working on the project.
+
+
+
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
   ### Built With:
   - <img src="https://img.shields.io/badge/JavaScript-563D7C?style=for-the-badge&logo=JavaScript&logoColor=white"> 
- - <img src="https://img.shields.io/badge/Python-563D7C?style=for-the-badge&logo=Python&logoColor=white"> 
- - <img src="https://img.shields.io/badge/Ruby-563D7C?style=for-the-badge&logo=Ruby&logoColor=white"> 
- - <img src="https://img.shields.io/badge/React-563D7C?style=for-the-badge&logo=React&logoColor=white"> 
- - <img src="https://img.shields.io/badge/jQuery-563D7C?style=for-the-badge&logo=jQuery&logoColor=white"> 
- - <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=Bootstrap&logoColor=white"> 
- - <img src="https://img.shields.io/badge/Django-563D7C?style=for-the-badge&logo=Django&logoColor=white"> 
- - <img src="https://img.shields.io/badge/RubyonRails-563D7C?style=for-the-badge&logo=RubyonRails&logoColor=white"> 
  
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,20 +92,42 @@
   
   ### Prerequisites 
 
-  You must have `node.js` installed on your computer to install this application.
+  You must have ***node.js*** installed on your computer to install this application.
+
+  
+
+  
+  ### Installation 
+
+  1. Clone the repo
+   ``` sh
+   git clone https://github.com/fl4viooliveira/readme-generator.git
+   ```
+
+2. Install NPM packages
+  ``` sh
+  npm install
+  ```
+
+3. Execute `index.js`
+  ``` sh
+  node index.js;
+  ```
+
+4. Answer the questions.
 
   
   
 
-  [contributors-shield]: https://img.shields.io/github/contributors/sdfsd/sdfsd.svg?style=for-the-badge
-  [contributors-url]: https://github.com/sdfsd/sdfsd/graphs/contributors
-  [forks-shield]: https://img.shields.io/github/forks/sdfsd/sdfsd.svg?style=for-the-badge
-  [forks-url]: https://github.com/sdfsd/sdfsd/network/members
-  [stars-shield]: https://img.shields.io/github/stars/sdfsd/sdfsd.svg?style=for-the-badge
-  [stars-url]: https://github.com/sdfsd/sdfsd/stargazers
-  [issues-shield]: https://img.shields.io/github/issues/sdfsd/sdfsd.svg?style=for-the-badge
-  [issues-url]: https://github.com/sdfsd/sdfsd/issues
-  [license-shield]: https://img.shields.io/github/license/sdfsd/sdfsd.svg?style=for-the-badge
-  [license-url]: https://github.com/sdfsd/sdfsd/blob/master/LICENSE.txt
+  [contributors-shield]: https://img.shields.io/github/contributors/fl4viooliveira/readme-generator.svg?style=for-the-badge
+  [contributors-url]: https://github.com/fl4viooliveira/readme-generator/graphs/contributors
+  [forks-shield]: https://img.shields.io/github/forks/fl4viooliveira/readme-generator.svg?style=for-the-badge
+  [forks-url]: https://github.com/fl4viooliveira/readme-generator/network/members
+  [stars-shield]: https://img.shields.io/github/stars/fl4viooliveira/readme-generator.svg?style=for-the-badge
+  [stars-url]: https://github.com/fl4viooliveira/readme-generator/stargazers
+  [issues-shield]: https://img.shields.io/github/issues/fl4viooliveira/readme-generator.svg?style=for-the-badge
+  [issues-url]: https://github.com/fl4viooliveira/readme-generator/issues
+  [license-shield]: https://img.shields.io/github/license/fl4viooliveira/readme-generator.svg?style=for-the-badge
+  [license-url]: https://github.com/fl4viooliveira/readme-generator/blob/master/LICENSE.txt
 
   
