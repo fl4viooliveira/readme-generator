@@ -183,6 +183,27 @@ const questions = () =>
       name: "contri",
       message: "Do you want to add contributing steps to this document?\n >> ",
     },
+    {
+      type: "confirm",
+      name: "contact",
+      message: "Do you want to add your email contact at this document?\n >> "
+    },
+    {
+      type: "input",
+      name: "name",
+      message: "Add your name:\n >> ",
+      when(answers){
+        return answers.contact;
+      }
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Add your email:\n >> ",
+      when(answers){
+        return answers.contact;
+      }
+    },
   ]);
 
 // function to write README file
